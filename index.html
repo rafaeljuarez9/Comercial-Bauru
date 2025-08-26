@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Comercial Bauru - Corretora de Grãos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .company-name {
+            font-family: 'Days One', cursive;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #4CAF50;
+            margin: 10px 0 5px 0;
+            text-align: center;
+        }
+        
+        .company-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #666;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+        .company-subtitle.green {
+            color: #4CAF50;
+        }
+        
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid #4CAF50;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), var(--hero-bg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero h1 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            padding: 30px 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #4CAF50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .swiper {
+            width: 100%;
+            padding: 20px 0;
+        }
+        
+        .swiper-slide {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .swiper-slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .swiper-slide img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .swiper-slide p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+        
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .whatsapp-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .contact-section {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Responsividade melhorada */
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 2.5rem;
+            }
+            
+            .company-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .hero {
+                margin: 10px;
+                padding: 30px 15px;
+            }
+            
+            .hero-logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                margin: 10px;
+                padding: 20px 15px;
+            }
+            
+            .swiper-slide img {
+                height: 150px;
+            }
+            
+            .swiper-slide p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-logo {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .company-name {
+                font-size: 2rem;
+            }
+            
+            .company-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section h2 {
+                font-size: 1.4rem;
+            }
+            
+            .swiper-slide {
+                padding: 15px;
+            }
+            
+            .swiper-slide img {
+                height: 120px;
+            }
+        }
+        /* Seção Como trabalhamos */
+        .work-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .work-text {
+            flex: 1;
+            font-size: 1.05rem;
+            color: #444;
+        }
+        .work-text p {
+            margin: 0 0 12px 0;
+        }
+        .work-intro {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            margin-bottom: 14px;
+            color: #333;
+            text-align: center;
+            font-weight: 700;
+        }
+        @media (max-width: 768px) {
+            .work-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .work-text {
+                font-size: 1rem;
+            }
+            .work-content .whatsapp-button {
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero" style="--hero-bg: url('fundo-hero.jpg');">
+    <img src="logo.jpg" alt="Logo Comercial Bauru" class="hero-logo">
+    <h1 class="company-name">COMERCIAL BAURU</h1>
+    <h2 class="company-subtitle">Corretora de Grãos</h2>
+    <p>Atuamos com compromisso e qualidade na comercialização de grãos e sementes para alimentação humana e consumo pet.</p>
+</div>
+
+ 
+
+<div class="section">
+    <h2>SEMENTES PARA PÁSSAROS</h2>
+    <div class="swiper" id="swiper-passaros">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="alpiste teste.jpeg" alt="Alpiste"><p>Alpiste</p></div>
+            <div class="swiper-slide"><img src="painço.jpeg" alt="Painço"><p>Painço</p></div>
+            <div class="swiper-slide"><img src="girassol miudo teste.jpeg" alt="Girassol Miúdo"><p>Girassol Miúdo</p></div>
+            <div class="swiper-slide"><img src="girassol graudo (2).jpeg" alt="Girassol Graúdo"><p>Girassol Graúdo</p></div>
+            <div class="swiper-slide"><img src="aveia com casca.jpeg" alt="Aveia com Casca"><p>Aveia com Casca</p></div>
+            <div class="swiper-slide"><img src="aveia sem casca.jpeg" alt="Aveia sem Casca"><p>Aveia sem Casca</p></div>
+            <div class="swiper-slide"><img src="linhaca marrom.jpeg" alt="Linhaça Marrom"><p>Linhaça Marrom</p></div>
+            <div class="swiper-slide"><img src="linhaça dourada.jpeg" alt="Linhaça Dourada"><p>Linhaça Dourada</p></div>
+            <div class="swiper-slide"><img src="milheto.jpeg" alt="Milheto"><p>Milheto</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>GRÃOS PARA CONSUMO HUMANO</h2>
+    <div class="swiper" id="swiper-graos">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="milho pipoca.jpeg" alt="Milho Pipoca"><p>Milho Pipoca</p></div>
+            <div class="swiper-slide"><img src="canjica branca.jpeg" alt="Canjica Branca"><p>Canjica Branca</p></div>
+            <div class="swiper-slide"><img src="amendoim runner.jpeg" alt="Amendoim Runner"><p>Amendoim Runner</p></div>
+            <div class="swiper-slide"><img src="lentilha can teste.jpeg" alt="Lentilha Canadense"><p>Lentilha Canadense</p></div>
+            <div class="swiper-slide"><img src="lentilha arggg teste.jpeg" alt="Lentilha Argentina"><p>Lentilha Argentina</p></div>
+            <div class="swiper-slide"><img src="grao de bico.jpeg" alt="Grão de Bico"><p>Grão de Bico</p></div>
+            <div class="swiper-slide"><img src="ervilha partida.jpeg" alt="Ervilha Partida"><p>Ervilha Partida</p></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>COMO TRABALHAMOS</h2>
+    <p class="work-intro">Aqui você encontra a flexibilidade que precisa para fechar bons negócios!</p>
+    <div class="work-content">
+        <div class="work-text">
+            <p>🚛 Cargas únicas ou mistas: entregamos entre 15 a 32 toneladas, seja de uma mercadoria específica ou de diferentes produtos na mesma carga.</p>
+            <p>📦 Mercadorias para retirada (FOB): também disponibilizamos opções para quem prefere retirar.</p>
+            <p>💰 Trabalhamos sempre sob cotação, garantindo o melhor preço e condições para cada cliente.</p>
+            <p>👉 Chame a gente no WhatsApp e faça sua cotação sem compromisso. Estamos prontos para atender sua necessidade com rapidez e segurança!</p>
+        </div>
+        <a class="whatsapp-button" href="https://wa.me/5514996958505" target="_blank">
+            <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            </svg>
+            Clique aqui e faça sua cotação
+        </a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    // Aguarda o DOM estar completamente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Pequeno delay para garantir que o Swiper carregue
+        setTimeout(function() {
+            // Inicializa o primeiro carrossel (Sementes para Pássaros)
+            const swiperPassaros = new Swiper('#swiper-passaros', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 }
+                }
+            });
+            
+            console.log('Swiper Pássaros inicializado:', swiperPassaros);
+        }, 100);
+        
+        // Inicializa o segundo carrossel (Grãos para Consumo Humano) com delay separado
+        setTimeout(function() {
+            const swiperGraos = new Swiper('#swiper-graos', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                loopedSlides: 2,
+                loopAdditionalSlides: 2,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                },
+                breakpoints: {
+                    640: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 }
+                },
+                on: {
+                    init: function() {
+                        console.log('Swiper Grãos - slides:', this.slides.length);
+                        console.log('Swiper Grãos - loop:', this.loop);
+                    },
+                    loopCreate: function() {
+                        console.log('Swiper Grãos - loop criado com sucesso');
+                    }
+                }
+            });
+            
+            console.log('Swiper Grãos inicializado:', swiperGraos);
+        }, 200);
+    });
+</script>
+
+</body>
+</html>
